@@ -13,7 +13,7 @@ textarea{
   padding: 10px;
 }
 
-.jumbotron {
+.custom-jumbotron {
   text-align: center;
   background-color: transparent;
   color: black;
@@ -72,5 +72,21 @@ textarea{
 
 #sortable {
   list-style: none;
+  margin: 0;
+}
+
+.schedule-item {
+  padding: 30px;
+}
+
+#time-line {
+  position: absolute;
+  width: auto;
+  border: solid pink 1px;
+  /* padding: 30px; */
+}
+
+#time-line p {
+  padding: 30px;
   margin: 0;
 }
