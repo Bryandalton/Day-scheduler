@@ -83,10 +83,13 @@ textarea{
   position: absolute;
   width: auto;
   border: solid pink 1px;
-  /* padding: 30px; */
 }
 
 #time-line p {
   padding: 31px;
   margin: 0;
+}
+
+#time {
+  font-family: monospace;
 }
