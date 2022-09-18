@@ -1,7 +1,8 @@
 var dateEl = $('#date')
 var timeEl = $('#time')
-var current = moment().hours();
-var scheduleTime = [moment().hours('8, hours'), moment().hours('9') ]
+var present = moment().hours();
+var scheduleTime = [8,9,10,11,12,13,14,15,26,17,18,19,20]
+var scheduleItem = $('.schedule-item')
 
 dateEl.text(moment().format('dddd MMMM YYYY'))
 // timeEl.text(moment().format('h:mm:ss a'))
@@ -20,9 +21,26 @@ $( function() {
   })
 
 
+console.log(present)
+console.log(scheduleTime[0])
+console.log(scheduleTime[1])
 
-  scheduleTime[0].diff(scheduleTime[1], 'hours')
+console.log(scheduleItem)
 
-  console.log(current)
+for (let i = 0; i > scheduleTime.length; i++) {
+  scheduleTime[i] = scheduleItem
 
-  console.log(scheduleTime[0])
+  if (present == scheduleTime[i]) {
+    scheduleItem.addClass('present')
+    scheduleItem.removeClass('past')
+    scheduleItem.removeClass('future')
+   } else if (present > scheduleTime[i]) {
+    scheduleItem.addClass('past')
+    scheduleItem.removeClass('present')
+    scheduleItem.removeClass('future')
+   } else if (present < scheduleTime[i]) {
+    scheduleItem.addClass('future')
+    scheduleItem.removeClass('past')
+    scheduleItem.removeClass('present')
+  }
+}

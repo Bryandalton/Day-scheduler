@@ -77,6 +77,9 @@ textarea{
 
 .schedule-item {
   padding: 30px;
+  border: 1px solid #c5c5c5;
+  font-weight: normal;
+  color: #454545;
 }
 
 #time-line {
