@@ -5,6 +5,7 @@ var present = moment().hours();
 var scheduleTime = [8,9,10,11,12,13,14,15,16,17,18,19,20];
 var scheduleItem = $('.schedule-item');
 var saveBtn = $('.save');
+var scheduleText = $('.schedule-text')
 
 dateEl.text(moment().format('dddd, MMMM YYYY'));
 // timeEl.text(moment().format('h:mm:ss a'))
@@ -32,16 +33,28 @@ function updateColor () {
     }
   }
 };
+//calls color code and checks for updates every minute
+updateColor()
+setInterval(updateColor, 60000)
 
-setInterval(updateColor, 1000)
-
-function saveEvent () {
-  var savedEvent = inputText.val().trim();
+function saveEvent (listIndex) {
+  var savedEvent = inputText.eq(listIndex).val().trim();
   var saveConfirm = $('#confirm-save')
+  var savedItem = $('<p>')
+  var localStorageKey = 'event#' + listIndex;
   saveConfirm.text('Save Confrimed!')
-  localStorage.setItem('event',savedEvent)
+  scheduleItem.eq(listIndex).append(savedItem)
+  localStorage.setItem(localStorageKey,savedEvent)
+  savedItem.text(localStorage.getItem(localStorageKey))
 };
 
-saveBtn.on('click', saveEvent)
+saveBtn.each((index, btn) => {
+  btn.addEventListener('click', () => saveEvent(index))
+});
+
+scheduleText.each((index, text) => {
+  var localStorageKey = 'event#' + index;
+  text.innerText = localStorage.getItem(localStorageKey)
+})
 
 console.log(present)
