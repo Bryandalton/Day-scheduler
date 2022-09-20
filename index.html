@@ -36,29 +36,38 @@
       <h3 id="time">3:33:33</h3>
     </header>
     <h6 id="confirm-save"></h6>
-    <aside id="time-line">
-      <p>8 Am</p>
-      <p>9 Am</p>
-      <p>10 Am</p>
-      <p>11 Am</p>
-      <p>12 Pm</p>
-      <p>1 Pm</p>
-      <p>2 Pm</p>
-      <p>3 Pm</p>
-      <p>4 Pm</p>
-      <p>5 Pm</p>
-      <p>6 Pm</p>
-      <p>7 Pm</p>
-    </aside>
-    <div class="container">
+    
+    <div class="container-fluid row">
+      <aside id="time-line" class="col-1">
+        <p>8 Am</p>
+        <p>9 Am</p>
+        <p>10 Am</p>
+        <p>11 Am</p>
+        <p>12 Pm</p>
+        <p>1 Pm</p>
+        <p>2 Pm</p>
+        <p>3 Pm</p>
+        <p>4 Pm</p>
+        <p>5 Pm</p>
+        <p>6 Pm</p>
+        <p>7 Pm</p>
+      </aside>
       <!-- Timeblocks go here -->
-      <ul id="sortable">
+      <ul id="sortable" class="col-lg-10 col-md-8 col-sm-5">
         <li class="schedule-item">
           <input
             type="text"
             class="input-text"
             placeholder="Schedule Event"
-          /><button class="save">&#128190;</button>
+            />
+            <p class="schedule-text"></p>
+        </li>
+        <li class="schedule-item">
+          <input
+            type="text"
+            class="input-text"
+            placeholder="Schedule Event"
+          />
           <p class="schedule-text"></p>
         </li>
         <li class="schedule-item">
@@ -66,7 +75,7 @@
             type="text"
             class="input-text"
             placeholder="Schedule Event"
-          /><button class="save">&#128190;</button>
+          />
           <p class="schedule-text"></p>
         </li>
         <li class="schedule-item">
@@ -74,7 +83,7 @@
             type="text"
             class="input-text"
             placeholder="Schedule Event"
-          /><button class="save">&#128190;</button>
+          />
           <p class="schedule-text"></p>
         </li>
         <li class="schedule-item">
@@ -82,7 +91,7 @@
             type="text"
             class="input-text"
             placeholder="Schedule Event"
-          /><button class="save">&#128190;</button>
+          />
           <p class="schedule-text"></p>
         </li>
         <li class="schedule-item">
@@ -90,7 +99,7 @@
             type="text"
             class="input-text"
             placeholder="Schedule Event"
-          /><button class="save">&#128190;</button>
+          />
           <p class="schedule-text"></p>
         </li>
         <li class="schedule-item">
@@ -98,7 +107,7 @@
             type="text"
             class="input-text"
             placeholder="Schedule Event"
-          /><button class="save">&#128190;</button>
+          />
           <p class="schedule-text"></p>
         </li>
         <li class="schedule-item">
@@ -106,7 +115,7 @@
             type="text"
             class="input-text"
             placeholder="Schedule Event"
-          /><button class="save">&#128190;</button>
+          />
           <p class="schedule-text"></p>
         </li>
         <li class="schedule-item">
@@ -114,7 +123,7 @@
             type="text"
             class="input-text"
             placeholder="Schedule Event"
-          /><button class="save">&#128190;</button>
+          />
           <p class="schedule-text"></p>
         </li>
         <li class="schedule-item">
@@ -122,7 +131,7 @@
             type="text"
             class="input-text"
             placeholder="Schedule Event"
-          /><button class="save">&#128190;</button>
+          />
           <p class="schedule-text"></p>
         </li>
         <li class="schedule-item">
@@ -130,7 +139,7 @@
             type="text"
             class="input-text"
             placeholder="Schedule Event"
-          /><button class="save">&#128190;</button>
+          />
           <p class="schedule-text"></p>
         </li>
         <li class="schedule-item">
@@ -138,18 +147,24 @@
             type="text"
             class="input-text"
             placeholder="Schedule Event"
-          /><button class="save">&#128190;</button>
-          <p class="schedule-text"></p>
-        </li>
-        <li class="schedule-item">
-          <input
-            type="text"
-            class="input-text"
-            placeholder="Schedule Event"
-          /><button class="save">&#128190;</button>
+          />
           <p class="schedule-text"></p>
         </li>
       </ul>
+      <div class="col-1">
+        <button class="save">&#128190;</button>
+        <button class="save">&#128190;</button>
+        <button class="save">&#128190;</button>
+        <button class="save">&#128190;</button>
+        <button class="save">&#128190;</button>
+        <button class="save">&#128190;</button>
+        <button class="save">&#128190;</button>
+        <button class="save">&#128190;</button>
+        <button class="save">&#128190;</button>
+        <button class="save">&#128190;</button>
+        <button class="save">&#128190;</button>
+        <button class="save">&#128190;</button>
+      </div>
     </div>
 
     <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
